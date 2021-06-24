@@ -1,38 +1,17 @@
-```{r, eval=FALSE, include=TRUE}
-"Protocolo:
- 
- 1. Daniel Felipe Villa Rengifo
- 
- 2. Lenguaje: R
- 
- 3. Tema: MÉTODOS DE CLUSTERING
- 
- 4. Fuentes:  
-    https://www.educba.com/clustering-methods/"
-```
-
-# Funciones del Ejercicio:
-
-+ `scale()` -> Función genérica para centrado y/o escalado de columnas de una matriz numérica.
-
-+ `dist()` -> Calcula y devuelve la matriz de distancias/similitud entre filas (utilizando la medida indicada, ej. euclídea).
-
-+ `as.dist()` -> Calcula la distancia basada en la correlación. (Su uso tiene sentido para datos con al menos tres variables).
-
-+ `hclust()` -> Implementación de clustering jerárquico.
-
-+ `cutree()` -> Corta un árbol en varios grupos, ya sea especificando el número deseado de grupos (k) o la altura del corte (h).
-
-+ `kmeans()` -> Implementa k-means clustering sobre una matriz de datos.
-
-# NCI60
-
-aplicado al set de datos `NCI60`, se mostrará a continuación la aplicación de K-means clustering y clustering jerárquico para averiguar si las observaciones se agrupan en distintos tipos de cáncer.
-
-Para comenzar, estandarizamos las variables para que tengan media 0 y desviación estándar 1. Este paso es opcional, y debe llevarse a cabo solo si nos interesa que cada gen esté en la misma escala.
+## ---- eval=FALSE, include=TRUE-------------------------------------------------------
+## "Protocolo:
+## 
+##  1. Daniel Felipe Villa Rengifo
+## 
+##  2. Lenguaje: R
+## 
+##  3. Tema: MÉTODOS DE CLUSTERING
+## 
+##  4. Fuentes:
+##     https://www.educba.com/clustering-methods/"
 
 
-```{r}
+## ------------------------------------------------------------------------------------
 # Guardamos los OUTPUTS:
 sink("OUTPUTS.txt")
 
@@ -74,14 +53,9 @@ unique(NCI60$labs)
 # Número de muestras por tipo de cáncer
 print("# Número de muestras por tipo de cáncer")
 table(NCI60$labs)
-```
-
-# Clustering jerárquico
-
-A continuación se muestra un ejercicio usando _complete, single y average linkage,_ escogiendo la distancia euclídea como medida de similitud.
 
 
-```{r}
+## ------------------------------------------------------------------------------------
 # Matriz distancia euclídea entre observaciones
 datos.nci.euc <- dist(datos.nci, method = "euclidean")
 
@@ -130,4 +104,3 @@ dev.off()
 "Como se observa en cada uno de los tres dendogramas, el tipo de linkage escogido afecta el resultado del agrupamiento (las hojas de un dendograma usando single linkage suelen unirse una a una). Claramente, las líneas celulares de un solo tipo de cáncer tienden a agruparse juntas."
 
 sink()
-```
