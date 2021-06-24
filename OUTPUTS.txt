@@ -1,0 +1,33 @@
+[1] "# NOmbre de la base e datos 1"
+[1] "data" "labs"
+[1] "#Diemncion de los datos anteriores:"
+[1]   64 6830
+[1] "# Observación de los datos:"
+          1         2         3         4         5             6
+V1 0.300000  1.180000  0.550000  1.140000 -0.265000 -7.000000e-02
+V2 0.679961  1.289961  0.169961  0.379961  0.464961  5.799610e-01
+V3 0.940000 -0.040000 -0.170000 -0.040000 -0.605000  0.000000e+00
+V4 0.280000 -0.310000  0.680000 -0.810000  0.625000 -1.387779e-17
+V5 0.485000 -0.465000  0.395000  0.905000  0.200000 -5.000000e-03
+V6 0.310000 -0.030000 -0.100000 -0.460000 -0.205000 -5.400000e-01
+[1] "# Estandarización de los datos"
+           1            2          3          4          5           6
+V1 0.7229554  1.594614647  1.3152906  1.3450554 -0.6001006 -0.21892339
+V2 1.5838967  1.739790603  0.4382214  0.6489885  0.9047460  1.63581692
+V3 2.1731106 -0.016089747 -0.3463542  0.2643754 -1.3010255 -0.01917014
+V4 0.6776381 -0.372557113  1.6153098 -0.4408142  1.2346734 -0.01917014
+V5 1.1421409 -0.577195786  0.9575754  1.1298352  0.3585172 -0.03343823
+V6 0.7456141 -0.002887252 -0.1848054 -0.1202735 -0.4764080 -1.56012378
+[1] "# Tipos de cáncer distintos en el set de datos"
+ [1] "CNS"         "RENAL"       "BREAST"      "NSCLC"       "UNKNOWN"    
+ [6] "OVARIAN"     "MELANOMA"    "PROSTATE"    "LEUKEMIA"    "K562B-repro"
+[11] "K562A-repro" "COLON"       "MCF7A-repro" "MCF7D-repro"
+[1] "# Número de muestras por tipo de cáncer"
+
+     BREAST         CNS       COLON K562A-repro K562B-repro    LEUKEMIA MCF7A-repro 
+          7           5           7           1           1           6           1 
+MCF7D-repro    MELANOMA       NSCLC     OVARIAN    PROSTATE       RENAL     UNKNOWN 
+          1           8           9           6           2           9           1 
+png 
+  2 
+[1] "Como se observa en cada uno de los tres dendogramas, el tipo de linkage escogido afecta el resultado del agrupamiento (las hojas de un dendograma usando single linkage suelen unirse una a una). Claramente, las líneas celulares de un solo tipo de cáncer tienden a agruparse juntas."
